@@ -1,22 +1,22 @@
 
 # nipple
 
-It is a simple script that generates all desired icon sizes for iPhone, iPad and Apple Watch applications.
+The script takes one large PNG image and creates **AppIcon.appiconset** with all  icons prefilled.
 
-iOS app icon resizing is a frustration for developers. Unlike other icons in *Assets.xcassets*, **AppIcon** can not be a vector or even just one large sized image to get it futher resized by Apple App Store. The script takes wide squared image of an app and generates images for all sizes needed.
+ ***Image must be square and not less than 1024 x 1024 px.***
 
-*Minimum image size is 180px, because it is the largest size needed for an app. For Apple Watch, though, it is only 98pt*
+*nipple.sh* was created to end up Xcode icons frustration. Every iOS dev familiar with a pain of filling **AppIcon** for iPhone, iPad and Apple Watch in a project, especially, when only large image provided. The script not only creates and fills images, an  **AppIcon** folder it provides is also smaller than the one that was filled within Xcode, because *nipple.sh* links same sizes to one image instead of copying.
+
 
 ## Usage
 
 The script can be downloaded [here](https://dl.dropbox.com/s/8zup7zpnvl2uy6c/nipple.sh?dl=1) or just copied to a local file on your computer. As soon as the script was loaded, it can be used as following
 
 ```
-cd /path/where/you/want/your/icons/folder
 bash /path/to/nipple.sh /path/to/your/wide_icon.png
 ```
 
-And that's it. Icons will be generated in place within an *icons* folder and ready to be used in an Xcode project.
+And that's it. Then **AppIcon.appiconset** within **Assets.xcassets** in Xcode project can be simply replaced with the one that was created by script.
 
 ## Convenience tips
 

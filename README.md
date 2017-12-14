@@ -10,7 +10,7 @@ The script takes one large PNG image and creates **AppIcon.appiconset** with all
 
 ## Usage
 
-The script can be downloaded [here](https://dl.dropbox.com/s/8zup7zpnvl2uy6c/nipple.sh?dl=1) or just copied to a local file on your computer. As soon as the script was loaded, it can be used as following
+The script can be downloaded [here](https://dl.dropbox.com/s/u3h4b8805uq0xnw/nipple.sh?dl=1) or just copied to a local file on your computer. As soon as the script was loaded, it can be used as following
 
 ```
 bash /path/to/nipple.sh /path/to/your/wide_icon.png

@@ -16,7 +16,9 @@ The script can be downloaded [here](https://dl.dropbox.com/s/8zup7zpnvl2uy6c/nip
 bash /path/to/nipple.sh /path/to/your/wide_icon.png
 ```
 
-And that's it. Then **AppIcon.appiconset** within **Assets.xcassets** in Xcode project can be simply replaced with the one that was created by script.
+And that's it. A folder will appear in the folder where image is located.
+
+Now  **AppIcon.appiconset** folder in project (within **Assets.xcassets** folder) can be simply replaced with the one that was created by script. Enjoy!
 
 ## Convenience tips
 

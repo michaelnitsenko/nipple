@@ -10,13 +10,13 @@ The script takes one large PNG image and creates **AppIcon.appiconset** with all
 
 ## Usage
 
-The script can be downloaded [here](https://dl.dropbox.com/s/u3h4b8805uq0xnw/nipple.sh?dl=1) or just copied to a local file on your computer. As soon as the script was loaded, it can be used as following
+The script can be downloaded [here](https://dl.dropbox.com/s/u3h4b8805uq0xnw/nipple.sh?dl=1) or just copied to a local file. As soon as *nipple.sh* was loaded, it can be used as following
 
 ```
 bash /path/to/nipple.sh /path/to/your/wide_icon.png
 ```
 
-And that's it. A folder will appear in the folder where image is located.
+And that's it. A folder will appear near specified image.
 
 Now  **AppIcon.appiconset** folder in project (within **Assets.xcassets** folder) can be simply replaced with the one that was created by script. Enjoy!
 
@@ -26,8 +26,8 @@ To run the script without typing ```bash path/to/nipple.sh``` everytime, you can
 
 ```
 cd /path/to/your/nipple/file
-cp nipple.sh ~/bin/
-chmod +x ~/bin/nipple.sh
+cp nipple.sh /usr/bin/
+chmod +x /usr/bin/nipple.sh
 ```
 
 That will allow you to call script as a regular console command

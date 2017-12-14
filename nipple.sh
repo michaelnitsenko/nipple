@@ -1,20 +1,20 @@
 #!/bin/bash
 
+sizes=( 20 40 60 29 58 87 40 80 120 120 180 76 152 167 48 55 172 196 )
+names=( "20" "20@2x" "20@3x" "29" "29@2x" "29@3x" "40" "40@2x" "40@3x" "60@2x" "60@3x" "76" "76@2x" "83.5@2x" "24@2x" "27.5@2x" "86@2x" "98@2x" )
+out_folder="icons"
 
-f=$(pwd)
 
-mkdir icons
-sips --resampleWidth 20 "${f}/${1}" --out "${f}/icons/20.png"
-sips --resampleWidth 40 "${f}/${1}" --out "${f}/icons/20@2x.png"
-sips --resampleWidth 60 "${f}/${1}" --out "${f}/icons/20@3x.png"
-sips --resampleWidth 29 "${f}/${1}" --out "${f}/icons/29.png"
-sips --resampleWidth 58 "${f}/${1}" --out "${f}/icons/29@2x.png"
-sips --resampleWidth 87 "${f}/${1}" --out "${f}/icons/29@3x.png"
-sips --resampleWidth 40 "${f}/${1}" --out "${f}/icons/40.png"
-sips --resampleWidth 80 "${f}/${1}" --out "${f}/icons/40@2x.png"
-sips --resampleWidth 120 "${f}/${1}" --out "${f}/icons/40@3x.png"
-sips --resampleWidth 120 "${f}/${1}" --out "${f}/icons/60@2x.png"
-sips --resampleWidth 180 "${f}/${1}" --out "${f}/icons/60@3x.png"
-sips --resampleWidth 76 "${f}/${1}" --out "${f}/icons/76.png"
-sips --resampleWidth 152 "${f}/${1}" --out "${f}/icons/76@2x.png"
-sips --resampleWidth 167 "${f}/${1}" --out "${f}/icons/83.5@2x.png"
+path_to_file=$1
+file_folder=$(dirname ${path_to_file})
+out_path="$file_folder/$out_folder"
+
+mkdir $out_path
+
+for i in ${!sizes[@]}
+do 
+  size=${sizes[$i]}
+  name=${names[$i]}
+  sips --resampleWidth $size $path_to_file --out $out_path/$name.png
+done
+

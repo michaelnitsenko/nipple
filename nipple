@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-sizes=( 20 40 60 29 58 87 40 80 120 120 180 76 152 167 48 55 172 196 1024 )
-names=( "20" "20@2x" "20@3x" "29" "29@2x" "29@3x" "40" "40@2x" "40@3x" "60@2x" "60@3x" "76" "76@2x" "83.5@2x" "24@2x" "27.5@2x" "86@2x" "98@2x" "1024" )
+sizes=( 20 40 60 29 58 87 40 80 120 120 180 76 152 167 48 55 172 196 1024 88 100 216)
+names=( "20" "20@2x" "20@3x" "29" "29@2x" "29@3x" "40" "40@2x" "40@3x" "60@2x" "60@3x" "76" "76@2x" "83.5@2x" "24@2x" "27.5@2x" "86@2x" "98@2x" "1024" "44@2x" "50@2x" "108@2x")
 out_folder="AppIcon.appiconset"
 
 
@@ -171,6 +171,22 @@ cat > $contents_file <<- EOM
       "subtype" : "38mm"
     },
     {
+      "size" : "44x44",
+      "idiom" : "watch",
+      "filename" : "44@2x.png",
+      "scale" : "2x",
+      "role" : "appLauncher",
+      "subtype" : "40mm"
+    },
+    {
+      "size" : "50x50",
+      "idiom" : "watch",
+      "filename" : "50@2x.png",
+      "scale" : "2x",
+      "role" : "appLauncher",
+      "subtype" : "44mm"
+    },
+    {
       "size" : "86x86",
       "idiom" : "watch",
       "filename" : "86@2x.png",
@@ -185,6 +201,14 @@ cat > $contents_file <<- EOM
       "scale" : "2x",
       "role" : "quickLook",
       "subtype" : "42mm"
+    },
+    {
+      "size" : "108x108",
+      "idiom" : "watch",
+      "filename" : "108@2x.png",
+      "scale" : "2x",
+      "role" : "quickLook",
+      "subtype" : "44mm"
     },
     {
       "size" : "1024x1024",
